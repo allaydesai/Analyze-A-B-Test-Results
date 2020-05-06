@@ -27,21 +27,21 @@ There are two datasets we used for our analysis:
 
 1. ab_data.csv
 
-![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/images/ab_data.PNG)
+![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/blob/master/images/ab_data.PNG)
 
 2. countries.csv
 
-![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/images/Country.PNG)
+![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/blob/master/images/Country.PNG)
 
 ### ANALYSIS
 
 1. A/B Test
 
-![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/images/A_B_test.PNG)
+![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/blob/master/images/A_B_test.PNG)
 
 histogram of the p_diffs
 
-![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/images/test_plot.PNG)
+![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/blob/master/images/test_plot.PNG)
 
 we computed the P-value which is the probability of observing your statistic (or one more extreme in favor of the alternative) if the null hypothesis is true.
 
@@ -61,21 +61,21 @@ Here we find that the z_score of 1.31 is less than critical value of 95% confide
 
 2. Regression Test
 
-![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/images/RegHyp.PNG)
+![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/blob/master/images/RegHyp.PNG)
 
 logit = sm.Logit( df2['converted'], df2[['intercept' ,'treatment']] )
 
-![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/images/RegressionResult.PNG)
+![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/blob/master/images/RegressionResult.PNG)
 
 Adding more factors:
 
 Country added to the dataframe:
 
-![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/images/combined.PNG)
+![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/blob/master/images/combined.PNG)
 
 model = sm.Logit(df_new['converted'], df_new[['intercept', 'US', 'CA']])
 
-![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/images/RegressionResult2.PNG)
+![alt text](https://github.com/allaydesai/Analyze-A-B-Test-Results/blob/master/images/RegressionResult2.PNG)
 
 The above findings conclude that there is not enough evidence to show interaction between the two country variables and page coversion rate since they both have a low p value. Hence once again we fail to reject the null hypothesis.
 
